@@ -2,7 +2,8 @@
   package="com.evilratt.flutter_zoom_sdk">
 
     <application>
-        <activity android:name=".CustomWaitActivity">
+        <activity android:name=".CustomWaitActivity"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="com.evilratt.flutter_zoom_sdk.intent.action.JoinBeforeHost" />
                 <category android:name="android.intent.category.DEFAULT"/>

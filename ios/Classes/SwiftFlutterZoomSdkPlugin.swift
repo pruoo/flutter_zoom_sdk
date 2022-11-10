@@ -177,6 +177,11 @@ public class SwiftFlutterZoomSdkPlugin: NSObject, FlutterPlugin,FlutterStreamHan
                     joinMeetingParameters.password = arguments["meetingPassword"]!!
                 }
 
+                let hasWebinarToken = arguments["webinarToken"]! != nil
+                if hasWebinarToken {
+                    joinMeetingParameters.webinarToken = arguments["webinarToken"]!!
+                }
+
                 //Joining the meeting and storing the response
                 let response = meetingService?.joinMeeting(with: joinMeetingParameters)
 

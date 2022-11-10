@@ -189,6 +189,8 @@ class ZoomMeetingOptions {
 
   /// JWT API Signature For Web Only
 
+  String? webinarToken;
+
   ZoomMeetingOptions({
     this.userId,
     this.userPassword,
@@ -207,6 +209,7 @@ class ZoomMeetingOptions {
     this.zoomAccessToken,
     this.jwtAPIKey,
     this.jwtSignature,
+    this.webinarToken,
   });
 }
 

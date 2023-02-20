@@ -48,11 +48,11 @@ Future<void> checkAndDownloadSDK(String location) async {
   bool exists = await File(iosSDKFile).exists();
 
   if (!exists) {
-    await downloadFile(
-        Uri.parse('https://www.dropbox.com/s/q7l6ryp870ggxx5/MobileRTC?dl=1'
-            // 'https://www.dropbox.com/s/a5vfh2m543t15k8/MobileRTC?dl=1'
+    await downloadFile(Uri.parse(
 
-            ),
+            // 'https://www.dropbox.com/s/q7l6ryp870ggxx5/MobileRTC?dl=1'
+            // 'https://www.dropbox.com/s/a5vfh2m543t15k8/MobileRTC?dl=1'
+            "https://www.dropbox.com/s/kiypi6wrtzu3p3t/MobileRTC?dl=0"),
         iosSDKFile);
   }
 

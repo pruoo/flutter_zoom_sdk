@@ -43,8 +43,10 @@ void main(List<String> args) async {
 }
 
 Future<void> checkAndDownloadSDK(String location) async {
+  // * ios sdk
   var iosSDKFile = location +
       '/ios/MobileRTC.xcframework/ios-arm64_armv7/MobileRTC.framework/MobileRTC';
+
   bool exists = await File(iosSDKFile).exists();
 
   if (!exists) {
@@ -61,6 +63,22 @@ Future<void> checkAndDownloadSDK(String location) async {
         iosSDKFile);
   }
 
+  // * ios bundle
+  var iosBundleFile = location +
+      '/ios/MobileRTCResources.bundle/ios-arm64_armv7/MobileRTCResources.bundle/MobileRTC';
+  bool bundleExists = await File(iosBundleFile).exists();
+
+  if (!bundleExists) {
+    await downloadFile(
+        Uri.parse(
+          // ! at the end of the url, ensure "?dl=1"
+          "https://www.dropbox.com/s/bcdciisq6lk6irc/MobileRTCResources.bundle.zip?dl=1", // 5.14.0
+        ),
+        iosBundleFile);
+  }
+  //
+
+  // * ios simulator
   var iosSimulateSDKFile = location +
       '/ios/MobileRTC.xcframework/ios-i386_x86_64-simulator/MobileRTC.framework/MobileRTC';
   exists = await File(iosSimulateSDKFile).exists();
@@ -71,6 +89,7 @@ Future<void> checkAndDownloadSDK(String location) async {
         iosSimulateSDKFile);
   }
 
+  // * android
   var androidCommonLibFile = location + '/android/libs/commonlib.aar';
   exists = await File(androidCommonLibFile).exists();
   if (!exists) {

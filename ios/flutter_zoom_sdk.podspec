@@ -22,6 +22,6 @@ A new flutter plugin project.
   s.swift_version = '5.0'
 
   s.preserve_paths = 'MobileRTC.xcframework', 'MobileRTCResources.bundle'
-  s.vendored_frameworks = 'MobileRTC.xcframework'
+  s.vendored_frameworks = 'ios/MobileRTC.xcframework'
   s.resource = 'MobileRTCResources.bundle'
 end

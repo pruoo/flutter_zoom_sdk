@@ -95,7 +95,7 @@ Future<void> checkAndDownloadSDK(String location) async {
   if (!exists) {
     await downloadFile(
         Uri.parse(
-          "https://www.dropbox.com/scl/fi/03vtxyxduuwx4i5o3jpom/commonlib.aar?rlkey=atdc73cvx6j6lw031vesh5r2j&dl=0", //5.12.8
+          "https://www.dropbox.com/scl/fi/03vtxyxduuwx4i5o3jpom/commonlib.aar?dl=1", //5.12.8
           // "https://www.dropbox.com/s/pc5h8dxkf5t1p0j/commonlib%20-%20five%20eleven%20ten%20-%20aar.aar?dl=1" // 5.13.10
           // "https://www.dropbox.com/s/fxiqvt6j07pf2cr/commonlib.aar?dl=1"
           // 'https://www.dropbox.com/s/i5fww50elzrphra/commonlib.aar?dl=1'
@@ -107,7 +107,7 @@ Future<void> checkAndDownloadSDK(String location) async {
   if (!exists) {
     await downloadFile(
         Uri.parse(
-          "https://www.dropbox.com/scl/fi/592l1lvgtf96clbthibw4/mobilertc.aar?rlkey=49dnqsitqa028b1tfxg87abpj&dl=0", // 5.12.8
+          "https://www.dropbox.com/scl/fi/592l1lvgtf96clbthibw4/mobilertc.aar?dl=1", // 5.12.8
           // "https://www.dropbox.com/s/3qmscuct756nhp0/mobilertc%20-%20five%20eleven%20ten%20-%20aar.aar?dl=1", // 5.13.10
           // "https://www.dropbox.com/s/e9f7qz2ajk42tft/mobilertc.aar?dl=1"
           // 'https://www.dropbox.com/s/ahh06pva216szc1/mobilertc.aar?dl=1'
